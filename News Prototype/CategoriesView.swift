@@ -7,24 +7,6 @@
 
 import SwiftUI
 
-struct CategoryCard: View {
-    let geometry: GeometryProxy
-
-    var body: some View {
-        ZStack(alignment: .bottomTrailing) {
-            Image("business")
-                .resizable()
-                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                .frame(width: geometry.size.width * 0.45, height: geometry.size.width * 0.55)
-            Text("Business")
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding(12)
-        }
-        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-    }
-}
-
 struct CategoriesView: View {
     var body: some View {
         GeometryReader { geometry in
