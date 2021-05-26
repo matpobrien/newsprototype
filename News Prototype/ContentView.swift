@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 0
+    @State private var selection = 1
     var body: some View {
         TabView(selection: $selection) {
-            CategoriesView()
+            Categories()
                 .font(.title)
                 .tabItem {
                     VStack {
@@ -20,7 +20,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            Text("Second View")
+            Profile()
                 .font(.title)
                 .tabItem {
                     VStack {
