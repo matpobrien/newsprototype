@@ -9,11 +9,19 @@ import SwiftUI
 
 struct CategoryRow: View {
     let geometry: GeometryProxy
+    let categoryNameLeft: String
+    let categoryNameRight: String
     
     var body: some View {
         HStack {
-            CategoryCard(geometry: geometry)
-            CategoryCard(geometry: geometry)
+            NavigationLink(destination: Category(categoryName: categoryNameLeft)) {
+                CategoryCard(geometry: geometry, categoryName: categoryNameLeft)
+
+            }
+            NavigationLink(destination: Category(categoryName: categoryNameRight)) {
+                CategoryCard(geometry: geometry, categoryName: categoryNameRight)
+
+            }
         }
     }
 }

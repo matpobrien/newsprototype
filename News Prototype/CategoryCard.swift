@@ -9,14 +9,15 @@ import SwiftUI
 
 struct CategoryCard: View {
     let geometry: GeometryProxy
+    let categoryName: String
 
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            Image("business")
+            Image(categoryName.lowercased())
                 .resizable()
                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                 .frame(width: geometry.size.width * 0.45, height: geometry.size.width * 0.55)
-            Text("Business")
+            Text(categoryName)
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding(12)
